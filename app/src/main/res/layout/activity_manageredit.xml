@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="12dp"
+    tools:context=".admin.manageredit">
+
+    <EditText
+        android:id="@+id/edisavailable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="availability"/>
+
+    <EditText
+        android:id="@+id/edshowads"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="showads"/>
+
+    <EditText
+        android:id="@+id/edversion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="version"/>
+
+    <EditText
+        android:id="@+id/edlink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="link"/>
+
+    <Button
+        android:id="@+id/bsubmitmanager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update"/>
+
+    <Button
+        android:id="@+id/bshowmanager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show"/>
+
+
+</LinearLayout>

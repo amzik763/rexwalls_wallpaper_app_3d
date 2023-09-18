@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".admin.addwallpapers">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="Add own wallpaper"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="17sp"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            android:padding="5dp">
+
+            <ProgressBar
+                android:id="@+id/pb"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:elevation="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imvthumb"
+                app:layout_constraintVertical_bias="0.744" />
+
+
+            <Button
+                android:id="@+id/tvChoosethumb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/fullrounded_greydark"
+                android:elevation="5dp"
+                android:padding="8dp"
+                android:text="Choose"
+                android:textColor="@color/colorYellow"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/tvUploadthumb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/fullrounded_greydark"
+                android:elevation="5dp"
+                android:padding="8dp"
+                android:text="Upload"
+                android:textColor="@color/colorYellow"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvChoosethumb" />
+
+
+            <Button
+                android:id="@+id/tvchoosemain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/fullrounded_greydark"
+                android:elevation="5dp"
+                android:padding="8dp"
+                android:text="Choose"
+                android:textColor="@color/colorYellow"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvuploadmain" />
+
+            <Button
+                android:id="@+id/tvuploadmain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/fullrounded_greydark"
+                android:elevation="5dp"
+                android:padding="8dp"
+                android:text="Upload"
+                android:textColor="@color/colorYellow"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/imvthumb"
+                android:layout_width="120dp"
+                android:layout_height="210dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/fullrounded_greymedium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imvmain"
+                android:layout_width="120dp"
+                android:layout_height="210dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/fullrounded_greymedium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/ed_wallpaperid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Spinner
+                android:id="@+id/spinCat"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="16dp"/>
+            <Spinner
+                android:id="@+id/spinSubCat"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="16dp"/>
+            <Spinner
+                android:id="@+id/spinIsTop"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="16dp"/>
+            <Spinner
+                android:id="@+id/spinIsPremium"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="16dp"/>
+
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/edTags"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginHorizontal="15dp"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="Tags"
+                android:paddingStart="4dp"
+                android:textSize="14sp"/>
+
+            <EditText
+                android:id="@+id/edlink"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginHorizontal="15dp"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="Thumbnail Link"
+                android:paddingStart="4dp"
+                android:textSize="14sp"/>
+
+            <EditText
+                android:id="@+id/eddownloadlink"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginHorizontal="15dp"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="Image Link"
+                android:paddingStart="4dp"
+                android:textSize="14sp"/>
+
+
+        </LinearLayout>
+
+
+
+
+        <Button
+            android:id="@+id/b_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD"
+            android:background="@drawable/rounded_grey"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/b_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MANAGER"
+            android:background="@drawable/rounded_grey"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/white"/>
+
+
+        <Button
+            android:id="@+id/b_launch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Launch"
+            android:background="@drawable/rounded_grey"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/white"/>
+
+
+    </LinearLayout>
+</ScrollView>

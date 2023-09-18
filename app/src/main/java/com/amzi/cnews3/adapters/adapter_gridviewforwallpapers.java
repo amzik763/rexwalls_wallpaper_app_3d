@@ -1,0 +1,114 @@
+package com.amzi.cnews3.adapters;
+
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.GridView;
+import android.widget.ImageView;
+
+import com.squareup.picasso.Callback;
+import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
+
+public class adapter_gridviewforwallpapers extends BaseAdapter {
+
+
+    Context ctx;
+    ArrayList<model_wallpapers> model_wallpaperss;
+    GridView gridView;
+    ImageView imvWallpaper;
+    com.creative.dnas.rexwallnew.utility.sharedData sharedData;
+    long lastId;
+    String name;
+    String type;
+
+
+    public adapter_gridviewforwallpapers(final Context ctx, ArrayList<model_wallpapers> model_wallpaperss, GridView gridView,long lastId,String name,String type) {
+        this.ctx = ctx;
+        this.gridView = gridView;
+        this.model_wallpaperss = model_wallpaperss;
+        this.lastId = lastId;
+        this.name = name;
+        this.type = type;
+        sharedData = new sharedData(ctx);
+
+    }
+
+
+    @Override
+    public int getCount() {
+
+        return model_wallpaperss.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return model_wallpaperss.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    @Override
+    public View getView(final int position, View convertView, ViewGroup parent) {
+        final View view;
+        if (convertView == null) {
+            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.model_wallpapermedium, null);
+        } else {
+            view = convertView;
+        }
+
+        imvWallpaper = view.findViewById(R.id.imvWallpaperm);
+
+
+
+        Log.d("checkpremium", model_wallpaperss.get(position).getIsPremium());
+
+        Picasso.get().load(model_wallpaperss.get(position).getLink()).resize(220, 320).centerCrop().into(imvWallpaper, new Callback() {
+            @Override
+            public void onSuccess() {
+                // shimmerFrameLayout2.stopShimmerAnimation();
+            }
+
+            @Override
+            public void onError(Exception e) {
+                // Toast.makeText(getApplicationContext(),"oor Network",Toast.LENGTH_LONG).show();
+            }
+        });
+
+        if (sharedData.getDownload(String.valueOf(model_wallpaperss.get(position).getWallpaperId()))) {
+            model_wallpaperss.get(position).setIsDownloaded("yes");
+        } else
+            model_wallpaperss.get(position).setIsDownloaded("no");
+
+
+        imvWallpaper.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lastId = model_wallpaperss.get(model_wallpaperss.size()-1).getWallpaperId();
+               // Toast.makeText(ctx, "size: " + model_wallpaperss.size(), Toast.LENGTH_SHORT).show();
+                Intent wallpaperActivit = new Intent(ctx, wallpaperview.class);
+                wallpaperActivit.putParcelableArrayListExtra("data", model_wallpaperss);
+                wallpaperActivit.putExtra("position", position);
+                wallpaperActivit.putExtra("lastId", lastId);
+                wallpaperActivit.putExtra("name", name);
+                wallpaperActivit.putExtra("type", type);
+
+                //Toast.makeText(ctx, " "+ arraymodel_wallpapers.get(position), Toast.LENGTH_SHORT).show();
+                ctx.startActivity(wallpaperActivit);
+            }
+        });
+
+
+        return view;
+    }
+
+
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="wallpaper_application_title">My Live Wallpaper</string>
+    <string name="wallpaper_service_title">My Live Wallpaper</string>
+    <string name="wallpaper_service_description">My Live Wallpaper Description</string>
+    <string name="wallpaper_settings">Wallpaper Settings</string>
+
+    <string name="pref_screen_title">Wallpaper Settings</string>
+
+    <string name="btn_set_wallpaper">Set live wallpaper</string>
+
+    <string name="toast_select_wallpaper">Choose &quot;My Live Wallpaper&quot; from the list to start the Live Wallpaper.</string>
+    <string name="app_name">rexwalls</string>
+
+
+
+    <string name="admob_app_id">ca-app-pub-2616294916492253~5407638801</string>
+    <string name="banner_home">ca-app-pub-2616294916492253/7842230450</string>
+    <string name="banner_grid">ca-app-pub-2616294916492253/8081903605</string>
+    <string name="banner_viewpager">ca-app-pub-2616294916492253/8081903605</string>
+    <string name="interstitial_full_screen">ca-app-pub-2616294916492253/1276822106</string>
+    <string name="interstitial_video">ca-app-pub-2616294916492253/6146005405</string>
+</resources>

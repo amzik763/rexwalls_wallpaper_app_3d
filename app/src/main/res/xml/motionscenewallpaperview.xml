@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:motion="https://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetStart="@layout/activity_wallpaperview"
+        app:constraintSetEnd="@layout/activity_wallpaperviewstart"
+        >
+
+        <OnSwipe
+            app:touchAnchorId="@id/bottomHeaderLayout"
+            app:touchAnchorSide="top"
+            app:dragDirection="dragUp"
+            />
+
+
+
+    </Transition>
+
+
+    <Transition
+        app:constraintSetStart="@layout/activity_wallpaperview"
+        app:constraintSetEnd="@layout/activity_wallpaperviewend"
+        app:duration="550"
+        >
+
+        <OnSwipe
+            app:touchAnchorId="@id/clLeft"
+            app:touchAnchorSide="bottom"
+            app:dragDirection="dragDown"
+            />
+
+        <OnClick app:targetId="@id/upp"
+            app:clickAction="toggle"/>
+
+
+    </Transition>
+
+
+
+
+
+
+
+
+
+
+</MotionScene>

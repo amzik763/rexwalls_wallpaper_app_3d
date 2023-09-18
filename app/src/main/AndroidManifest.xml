@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppBaseTheme">
+        <activity android:name=".admin.addownwallpaper"></activity>
+        <activity android:name=".admin.manageredit" />
+        <activity
+            android:name=".splash"
+            android:configChanges="keyboardHidden|keyboard|locale|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppSplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".wallpaperviewdownload"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemefull" />
+        <activity
+            android:name=".downloadedwallpapers"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".categorybasedview"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wallpaperview"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseThemefull" />
+        <activity android:name=".admin.addwallpapers" />
+        <activity
+            android:name=".FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppBaseTheme" />
+
+        <meta-data
+            android:name="android.webkit.WebView.EnableSafeBrowsing"
+            android:value="true" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2616294916492253~5407638801" />
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_qSlWcCOq2jVrOD" />
+    </application>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+
+
+</manifest>

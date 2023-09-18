@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/cvs"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="8dp"
+    app:cardCornerRadius="5dp"
+     >
+
+    <ImageView
+        android:id="@+id/imvCategories"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@raw/loading"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tvcategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="2dp"
+        android:paddingHorizontal="4dp"
+        android:layout_gravity="bottom"
+        android:elevation="4dp"
+        android:textColor="@color/white"
+        android:text="category"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/tvbackcategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="2dp"
+        android:paddingHorizontal="4dp"
+        android:layout_gravity="bottom"
+        android:elevation="4dp"
+        android:textColor="@color/white"
+        android:text="category"
+        android:background="@color/white"
+        android:alpha="0.2"
+        android:textAlignment="center"/>
+</androidx.cardview.widget.CardView>
+
+</LinearLayout>
