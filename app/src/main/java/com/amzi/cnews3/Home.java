@@ -84,7 +84,7 @@ public class Home extends AppCompatActivity implements TextWatcher {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        MobileAds.initialize(this, getString(R.string.admob_app_id));
+//        MobileAds.initialize(this, getString(R.string.admob_app_id));
         sharedData = new sharedData(this);
         mxAdView = findViewById(R.id.adView);
         getmanufacturer();

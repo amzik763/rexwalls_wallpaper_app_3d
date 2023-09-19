@@ -11,8 +11,12 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.amzi.cnews3.R;
+import com.amzi.cnews3.model.model_wallpapers;
+import com.amzi.cnews3.wallpaperview;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
+import com.amzi.cnews3.utility.sharedData;
 
 import java.util.ArrayList;
 
@@ -21,7 +25,7 @@ public class adapter_recycleviewforwallpapers extends RecyclerView.Adapter<adapt
 
     private ArrayList<model_wallpapers> arraymodel_wallpapers = new ArrayList<>();
 
-    private com.creative.dnas.rexwallnew.utility.sharedData sharedData;
+    private sharedData sharedData;
     private Context ctx;
     private RecyclerView recyclerViewforbookitems;
     private int images[] = {

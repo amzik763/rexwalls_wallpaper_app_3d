@@ -10,6 +10,10 @@ import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 
+import com.amzi.cnews3.R;
+import com.amzi.cnews3.model.model_wallpapers;
+import com.amzi.cnews3.utility.sharedData;
+import com.amzi.cnews3.wallpaperview;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
@@ -22,7 +26,7 @@ public class adapter_gridviewforsimilarwallpapers extends BaseAdapter {
     ArrayList<model_wallpapers> model_wallpaperss;
     GridView gridView;
     ImageView imvWallpaper;
-    com.creative.dnas.rexwallnew.utility.sharedData sharedData;
+    sharedData sharedData;
 
 
     public adapter_gridviewforsimilarwallpapers(final Context ctx, ArrayList<model_wallpapers> model_wallpaperss, GridView gridView) {

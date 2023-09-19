@@ -11,8 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewpager.widget.PagerAdapter;
 
+import com.amzi.cnews3.R;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
+import com.amzi.cnews3.utility.sharedData;
 
 import java.io.File;
 import java.util.ArrayList;

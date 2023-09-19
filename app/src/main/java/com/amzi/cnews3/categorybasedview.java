@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.amzi.cnews3.firebase.Firebase_retrievefavouritewallpapersforgrid;
 import com.amzi.cnews3.firebase.Firebase_retrievewallpapersforgrid;
 import com.amzi.cnews3.model.model_wallpapers;
+import com.amzi.cnews3.utility.sharedData;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.firebase.database.DatabaseReference;
@@ -32,7 +33,7 @@ public class categorybasedview extends AppCompatActivity {
     private ArrayList<model_wallpapers> wallpapersArrayList = new ArrayList<>();
     private Firebase_retrievewallpapersforgrid firebase_retrievewallpapersforgrid;
     private Firebase_retrievefavouritewallpapersforgrid firebase_retrievefavouritewallpapersforgrid;
-    private com.amzi.cnews3.utility.sharedData sharedData;
+    private sharedData sharedData;
 
 
     @Override

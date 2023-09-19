@@ -13,6 +13,7 @@
         <activity android:name=".admin.manageredit" />
         <activity
             android:name=".splash"
+            android:exported="true"
             android:configChanges="keyboardHidden|keyboard|locale|orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppSplashTheme">

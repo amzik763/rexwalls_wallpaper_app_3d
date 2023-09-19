@@ -7,12 +7,17 @@ import android.os.Handler;
 import android.util.Log;
 import android.widget.GridView;
 
+import com.amzi.cnews3.R;
+import com.amzi.cnews3.model.model_wallpapers;
+import com.amzi.cnews3.utility.Dialouge;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-
+import com.amzi.cnews3.adapters.adapter_gridviewforwallpapers;
 import java.util.ArrayList;
+import com.amzi.cnews3.utility.sharedData;
+
 
 public class Firebase_retrievefavouritewallpapersforgrid {
 
@@ -22,8 +27,8 @@ public class Firebase_retrievefavouritewallpapersforgrid {
     GridView gridView;
     Context c;
     Dialog d;
-    com.creative.dnas.rexwallnew.adapters.adapter_gridviewforwallpapers adapter_gridviewforwallpapers;
-     com.creative.dnas.rexwallnew.utility.sharedData sharedData;
+    adapter_gridviewforwallpapers adapter_gridviewforwallpapers;
+    sharedData sharedData;
 
     public Firebase_retrievefavouritewallpapersforgrid(Query db, Context context, adapter_gridviewforwallpapers adapter_gridviewforwallpapers, GridView gridView, ArrayList<model_wallpapers> model_wallpapersx) {
         this.db = db;

@@ -36,12 +36,12 @@ import androidx.core.app.ActivityCompat;
 import androidx.viewpager.widget.ViewPager;
 
 import com.amzi.cnews3.adapters.adapter_gridviewforsimilarwallpapers;
+import com.amzi.cnews3.adapters.wallpaper_adapter;
 import com.amzi.cnews3.firebase.Firebase_retrievesimilarwallpapersforgrid;
 import com.amzi.cnews3.model.model_wallpapers;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
@@ -71,7 +71,7 @@ public class wallpaperview extends AppCompatActivity implements View.OnClickList
     private ArrayList<model_wallpapers> wallpapersArrayList = new ArrayList<>();
     private ArrayList<model_wallpapers> similarWallpapersArrayList = new ArrayList<>();
     private myvp viewPagerWallpaper;
-    private com.amzi.cnews3.adapters.wallpaper_adapter wallpaper_adapter;
+    private wallpaper_adapter wallpaper_adapter;
     private int currentPosition;
     private int wallpapercurrentposition;
     private ImageView imvFav, imvInfo, imvShare, imvLock, imvDownload, imvSet, imvFav2, imvInfo2, imvShare2;
@@ -92,7 +92,7 @@ public class wallpaperview extends AppCompatActivity implements View.OnClickList
     private boolean dontload = false;
 
     private AdView mxAdview;
-    private InterstitialAd interstitial;
+//    private InterstitialAd interstitial;
     AdRequest adIRequest = new AdRequest.Builder().build();
 
 
@@ -198,63 +198,63 @@ public class wallpaperview extends AppCompatActivity implements View.OnClickList
     }
 
     private void loadinterstitialad() {
-        interstitial = new InterstitialAd(wallpaperview.this);
-        interstitial.setAdUnitId(getString(R.string.interstitial_full_screen));
-        interstitial.loadAd(adIRequest);
-        interstitial.setAdListener(new AdListener()
-                                   {
-                                       @Override
-                                       public void onAdClicked() {
-                                           super.onAdClicked();
-                                       }
-
-                                       @Override
-                                       public void onAdFailedToLoad(int i) {
-                                           super.onAdFailedToLoad(i);
-                                           loadinterstitialad();
-                                           Log.d("adadad","adfailed");
-                                       }
-
-                                       @Override
-                                       public void onAdLoaded() {
-                                           super.onAdLoaded();
-                                           isAdloaded = true;
-                                           displayInterstitial();
-                                           Log.d("adadad","adfloaded");
-
-                                       }
-
-                                       @Override
-                                       public void onAdImpression() {
-                                           super.onAdImpression();
-                                       }
-
-                                       @Override
-                                       public void onAdLeftApplication() {
-                                           super.onAdLeftApplication();
-                                       }
-
-                                       @Override
-                                       public void onAdOpened() {
-                                           super.onAdOpened();
-                                       }
-
-                                       @Override
-                                       public void onAdClosed() {
-                                           super.onAdClosed();
-                                       }
-                                   }
-
-        );
+//        interstitial = new InterstitialAd(wallpaperview.this);
+//        interstitial.setAdUnitId(getString(R.string.interstitial_full_screen));
+//        interstitial.loadAd(adIRequest);
+//        interstitial.setAdListener(new AdListener()
+//                                   {
+//                                       @Override
+//                                       public void onAdClicked() {
+//                                           super.onAdClicked();
+//                                       }
+//
+//                                       @Override
+//                                       public void onAdFailedToLoad(int i) {
+//                                           super.onAdFailedToLoad(i);
+//                                           loadinterstitialad();
+//                                           Log.d("adadad","adfailed");
+//                                       }
+//
+//                                       @Override
+//                                       public void onAdLoaded() {
+//                                           super.onAdLoaded();
+//                                           isAdloaded = true;
+//                                           displayInterstitial();
+//                                           Log.d("adadad","adfloaded");
+//
+//                                       }
+//
+//                                       @Override
+//                                       public void onAdImpression() {
+//                                           super.onAdImpression();
+//                                       }
+//
+//                                       @Override
+//                                       public void onAdLeftApplication() {
+//                                           super.onAdLeftApplication();
+//                                       }
+//
+//                                       @Override
+//                                       public void onAdOpened() {
+//                                           super.onAdOpened();
+//                                       }
+//
+//                                       @Override
+//                                       public void onAdClosed() {
+//                                           super.onAdClosed();
+//                                       }
+//                                   }
+//
+//        );
     }
 
     public void displayInterstitial() {
 //         If Interstitial Ads are loaded then show else show nothing.
 
         if (sharedData.getshowads()) {
-            if (interstitial.isLoaded()) {
-                interstitial.show();
-            }
+//            if (interstitial.isLoaded()) {
+//                interstitial.show();
+//            }
             //loadinterstitialad();
         }
     }

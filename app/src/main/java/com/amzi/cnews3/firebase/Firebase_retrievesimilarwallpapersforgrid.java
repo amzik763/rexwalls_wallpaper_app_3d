@@ -5,6 +5,9 @@ import android.util.Log;
 import android.widget.GridView;
 import android.widget.Toast;
 
+import com.amzi.cnews3.adapters.adapter_gridviewforsimilarwallpapers;
+import com.amzi.cnews3.model.model_wallpapers;
+import com.amzi.cnews3.utility.sharedData;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.Query;
@@ -21,7 +24,7 @@ public class Firebase_retrievesimilarwallpapersforgrid {
     Context c;
     String wid = "no";
     adapter_gridviewforsimilarwallpapers adapter_gridviewforwallpapers;
-    com.creative.dnas.rexwallnew.utility.sharedData sharedData;
+    sharedData sharedData;
     long lastId = 0;
     String category = null;
     String tag = null;

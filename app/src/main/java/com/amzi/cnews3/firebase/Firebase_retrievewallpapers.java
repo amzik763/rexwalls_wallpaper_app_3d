@@ -8,6 +8,10 @@ import android.util.Log;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.amzi.cnews3.R;
+import com.amzi.cnews3.adapters.adapter_recycleviewforwallpapers;
+import com.amzi.cnews3.model.model_wallpapers;
+import com.amzi.cnews3.utility.sharedData;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.Query;
@@ -23,7 +27,7 @@ public class Firebase_retrievewallpapers {
     RecyclerView recyclerView;
     Context c;
     adapter_recycleviewforwallpapers adapter_recycleviewforwallpapersx;
-    com.creative.dnas.rexwallnew.utility.sharedData sharedData;
+    sharedData sharedData;
     Dialog d;
 
     public Firebase_retrievewallpapers(Query db, Context context, adapter_recycleviewforwallpapers adapter_recycleviewforwallpapersx, RecyclerView recyclerView, ArrayList<model_wallpapers> model_wallpapersx) {

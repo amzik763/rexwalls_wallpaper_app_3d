@@ -5,12 +5,14 @@ import android.util.Log;
 import android.widget.GridView;
 import android.widget.Toast;
 
+import com.amzi.cnews3.model.model_wallpapers;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-
+import com.amzi.cnews3.adapters.adapter_gridviewforwallpapers;
 import java.util.ArrayList;
+import com.amzi.cnews3.utility.sharedData;
 
 public class Firebase_retrievewallpapersforgrid {
 
@@ -20,8 +22,8 @@ public class Firebase_retrievewallpapersforgrid {
     GridView gridView;
     Context c;
     String wid = "no";
-    com.creative.dnas.rexwallnew.adapters.adapter_gridviewforwallpapers adapter_gridviewforwallpapers;
-    com.creative.dnas.rexwallnew.utility.sharedData sharedData;
+    adapter_gridviewforwallpapers adapter_gridviewforwallpapers;
+    sharedData sharedData;
     String category = null;
     boolean success = false;
     boolean dontload = false;
